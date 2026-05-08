@@ -1,0 +1,1 @@
+game_toggle_fullscreen()
