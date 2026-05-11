@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"SysCheats",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"SysCheats",
+  "parent":{
+    "name":"Cheats",
+    "path":"folders/Scripts/Systems/Cheats.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
