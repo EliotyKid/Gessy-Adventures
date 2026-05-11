@@ -28,7 +28,7 @@
   ],
   "name":"spr_player_combo_3_end",
   "nineSlice":null,
-  "origin":7,
+  "origin":9,
   "parent":{
     "name":"Player",
     "path":"folders/Sprites/Player.yy",
@@ -95,7 +95,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":15,
+    "xorigin":12,
     "yorigin":44,
   },
   "swatchColours":null,

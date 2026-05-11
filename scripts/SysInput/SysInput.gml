@@ -17,7 +17,8 @@ enum KEYS {
   LEFT,
   JUMP,
   SHIFT,
-  DOWN
+  DOWN,
+  ATACK,
 }
 
 global.___key_binds = []
@@ -122,5 +123,6 @@ ___add_key(KEYS.LEFT,"left",[ord("A"), vk_left], , gp_padl)
 ___add_key(KEYS.JUMP,"jump",vk_space,,gp_face1)
 ___add_key(KEYS.SHIFT,"shift",vk_shift)
 ___add_key(KEYS.DOWN,"down",ord("S"))
+___add_key(KEYS.ATACK,"atack",ord("E"))
 
 #endregion

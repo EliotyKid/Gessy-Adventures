@@ -3,7 +3,7 @@ hsp = 0
 vsp = 0
 maxHspWalk = 1
 maxHspRun = 3
-maxVsp = 6
+maxVsp = 5
 
 maxHspCurrent = maxHspWalk
 
@@ -30,6 +30,10 @@ is_turning = false
 facing_dir = 1
 turn_target_dir = 1
 turn_next_state = noone
+
+combo = 0
+buffer_atack_timer = 10
+max_buffer_atack_timer = buffer_atack_timer
 #endregion
 
 
@@ -47,6 +51,7 @@ state_turn = new state("turn")
 state_lgrab = new state("lgrab")
 state_lgrab_loop = new state("lgrab loop")
 state_lgrab_climb = new state("lgrab climb")
+state_atack = new state("atack")
 
 start_state(state_idle)
 #endregion
@@ -66,6 +71,8 @@ state_idle.update = function (){
         if GetInput(KEYS.SHIFT) change_state(state_run)
         else change_state(state_walk)
     }
+    
+   do_atack()
     
     if !is_ground && last_state != "lgrab climb" change_state(state_fall)
     do_jump()
@@ -293,8 +300,55 @@ state_turn.update = function(){
     }
 }
 #endregion
+#region atack
+state_atack.enter = function() {
+    if combo > 2 || last_state != "atack" combo = 0
+    switch (combo) {
+    	default:
+            change_sprite(spr_player_combo_1)
+            break;
+        case 1 :
+            change_sprite(spr_player_combo_2)
+            break;
+        case 2: 
+            change_sprite(spr_player_combo_3)
+            break;
+    }
+}
+state_atack.update = function() {
+    
+    do_atack()
+    
+    buffer_atack_timer--
+    
+    if end_animation(){
+        if  buffer_atack_timer > 0  {
+            buffer_atack_timer = 0
+             combo++ 
+            change_state(state_atack)
+        }else{
+            if sprite_index != spr_player_combo_1_end && sprite_index != spr_player_combo_2_end && sprite_index != spr_player_combo_3_end {
+                switch (combo) {
+                   	default: change_sprite(spr_player_combo_1_end)  break;
+                    case 1 : change_sprite(spr_player_combo_2_end)  break;
+                    case 2: change_sprite(spr_player_combo_3_end)  break;
+                   }
+            }else{
+                if end_animation() change_state(state_idle)
+            }
+        }
+    }
+}
+#endregion
 
 #endregion
+
+do_atack =  function() {
+    if GetInput(KEYS.ATACK){
+        buffer_atack_timer = max_buffer_atack_timer
+        change_state(state_atack)
+    }
+}
 
 do_jump = function(){
     if (is_ground || qtd_jumps>0 )&& GetInputPressed(KEYS.JUMP) {
@@ -338,7 +392,6 @@ apply_velocity = function() {
 function check_ground() {
     is_ground = place_meeting(x,y+1,colision_list)
 }
-
 
 start_turn = function(_target_dir){
     is_turning = true
