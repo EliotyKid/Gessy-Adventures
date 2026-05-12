@@ -48,6 +48,7 @@
     {"id":{"name":"oCutsceneManager","path":"objects/oCutsceneManager/oCutsceneManager.yy",},},
     {"id":{"name":"oDebug","path":"objects/oDebug/oDebug.yy",},},
     {"id":{"name":"oTrigger","path":"objects/oTrigger/oTrigger.yy",},},
+    {"id":{"name":"oVirutalButonsManger","path":"objects/oVirutalButonsManger/oVirutalButonsManger.yy",},},
     {"id":{"name":"oWindowManger","path":"objects/oWindowManger/oWindowManger.yy",},},
     {"id":{"name":"rInit","path":"rooms/rInit/rInit.yy",},},
     {"id":{"name":"rMain","path":"rooms/rMain/rMain.yy",},},

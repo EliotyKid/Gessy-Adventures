@@ -1,6 +1,12 @@
 {
   "$GMHtml5Options":"",
   "%Name":"HTML5",
+  "ConfigValues":{
+    "Debug":{
+      "option_html5_centregame":"true",
+      "option_html5_webgl":"1",
+    },
+  },
   "name":"HTML5",
   "option_html5_allow_fullscreen":true,
   "option_html5_browser_title":"Pixel Game",

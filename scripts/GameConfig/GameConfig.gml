@@ -18,13 +18,24 @@ with(global.game_settings){
 function game_init(){
 	if !instance_exists(oWindowManger) instance_create_layer(0,0,"Controllers",oWindowManger)
 	if !instance_exists(oControll) instance_create_layer(0,0,"Controllers",oControll)
+	if !instance_exists(oVirutalButonsManger) instance_create_layer(0,0,"Controllers",oVirutalButonsManger)
 	room_goto(global.game_settings.room_start)
 }
 
 function game_set_window(){
 	if !global.game_settings.cursor_visible window_set_cursor(cr_none)
 	window_set_caption(global.game_settings.window_caption)
-	window_set_size(global.game_settings.window_width,global.game_settings.window_height)
+    
+    if (os_browser != browser_not_a_browser) {
+        // Ajusta o tamanho do canvas para preencher o navegador
+        var _bw = browser_width;
+        var _bh = browser_height;
+        window_set_size(_bw, _bh);
+        window_center();
+    } else {
+        window_set_size(global.game_settings.window_width, global.game_settings.window_height);
+    }
+    
 	surface_resize(application_surface,global.game_settings.view_width,global.game_settings.view_height)
 	display_set_gui_size(global.game_settings.gui_width,global.game_settings.gui_height)
 	
@@ -47,9 +58,14 @@ function game_enable_view_port(){
 }
 
 function game_toggle_fullscreen(){
-	if window_get_fullscreen(){
-		window_set_fullscreen(false)
-	}else{
-		window_set_fullscreen(true)
-	}
+    if (os_browser != browser_not_a_browser) {
+        if (!window_get_fullscreen()) {
+            window_set_fullscreen(true);
+        } else {
+            window_set_fullscreen(false);
+        }
+    } else {
+        // Lógica original para Windows/Mac
+        window_set_fullscreen(!window_get_fullscreen());
+    }
 }

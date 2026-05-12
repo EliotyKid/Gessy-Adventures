@@ -1,5 +1,24 @@
 check_ground()
-apply_velocity()
+
+if GetInputPressed(KEYS.RIGHT) {
+    if (last_tap_timer_right > 0) is_runing_pressed = true
+    else last_tap_timer_right = tap_window
+}
+
+
+if GetInputPressed(KEYS.LEFT) {
+    if (last_tap_timer_left > 0) is_runing_pressed = true
+    else last_tap_timer_left = tap_window
+}
+
+apply_velocity() 
+
+if (move_dir == 0)  is_runing_pressed = false
+
+
+if (last_tap_timer_left > 0) last_tap_timer_left--
+if (last_tap_timer_right > 0) last_tap_timer_right--
+
 update_state()
 
 

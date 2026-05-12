@@ -34,6 +34,11 @@ turn_next_state = noone
 combo = 0
 buffer_atack_timer = 10
 max_buffer_atack_timer = buffer_atack_timer
+
+last_tap_timer_right = 0;
+last_tap_timer_left = 0;
+tap_window = 15
+is_runing_pressed = false
 #endregion
 
 
@@ -68,7 +73,7 @@ state_idle.update = function (){
     }
     
     if move_dir != 0 {
-        if GetInput(KEYS.SHIFT) change_state(state_run)
+        if is_runing_pressed change_state(state_run)
         else change_state(state_walk)
     }
     
@@ -91,7 +96,7 @@ state_walk.update = function(){
     
     if move_dir == 0 && abs(hsp) <.1 change_state(state_idle)
     
-    if GetInput(KEYS.SHIFT) && move_dir != 0 change_state(state_run)
+    if is_runing_pressed && move_dir != 0 change_state(state_run)
     
     if !is_ground change_state(state_fall)
     do_jump()
@@ -111,7 +116,7 @@ state_run.update = function() {
         exit
     }
     
-    if (move_dir != 0 && !GetInput(KEYS.SHIFT)) change_state(state_walk);
+    if (move_dir != 0 && !is_runing_pressed) change_state(state_walk);
         
     // Só entra no estado de animação de parada se a velocidade baixou o suficiente
     if (move_dir == 0 && abs(hsp) < (maxHspRun * 0.8)) {
@@ -131,7 +136,7 @@ state_run_to_idle.enter = function() {
 
 state_run_to_idle.update = function() {
    if (move_dir != 0) {
-        if (GetInput(KEYS.SHIFT)) change_state(state_run);
+        if (is_runing_pressed) change_state(state_run);
         else change_state(state_walk);
     }
 
