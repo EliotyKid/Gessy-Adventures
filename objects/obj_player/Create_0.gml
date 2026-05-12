@@ -1,3 +1,5 @@
+InitGameFeelvaraibles()
+
 #region Variables
 hsp = 0
 vsp = 0
@@ -65,6 +67,8 @@ start_state(state_idle)
 state_idle.enter = function() {
     change_sprite(spr_player_idle)
     hsp = 0
+    
+    if last_state == "fall" SquashSet(1.5*facing_dir,.7)
 }
 state_idle.update = function (){
     if should_start_turn() {
@@ -150,6 +154,8 @@ state_jump.enter = function() {
     
     vsp -= maxVsp
     y+=vsp
+    
+    SquashSet(.7*facing_dir,1.4)
 }
 state_jump.update = function()  {
     if vsp >= 0 change_state(state_fall)
@@ -202,6 +208,7 @@ state_fall.update = function() {
             change_state(state_jump)
         }else{
              change_state(state_idle)
+            //SquashSet(1.2*facing_dir,.9)
         }
     }
         
@@ -283,7 +290,7 @@ state_turn.update = function(){
     if !is_ground {
         is_turning = false
         facing_dir = turn_target_dir
-        image_xscale = facing_dir
+        scale.x = facing_dir
         change_state(state_fall)
         exit
     }
@@ -291,7 +298,7 @@ state_turn.update = function(){
     if end_animation(){
         is_turning = false
         facing_dir = turn_target_dir
-        image_xscale = facing_dir
+        scale.x = facing_dir
         
         if move_dir == 0 {
             change_state(state_idle)
@@ -405,7 +412,7 @@ start_turn = function(_target_dir){
     image_index = 0 
     image_speed = 1
     
-    image_xscale = facing_dir
+    scale.x = facing_dir
     
     if current_state.name == "run" change_sprite(spr_player_run_turn)
     else if current_state.name == "walk" change_sprite(spr_player_walk_turn)

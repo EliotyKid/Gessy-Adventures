@@ -1,2 +1,2 @@
-draw_self()
+DrawSelf()
 current_state.draw()

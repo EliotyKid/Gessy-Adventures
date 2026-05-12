@@ -1,0 +1,1 @@
+SquashSet(1.5*facing_dir,.7)

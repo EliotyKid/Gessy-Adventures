@@ -59,6 +59,7 @@
     {"id":{"name":"Cheats","path":"scripts/Cheats/Cheats.yy",},},
     {"id":{"name":"GameConfig","path":"scripts/GameConfig/GameConfig.yy",},},
     {"id":{"name":"GameConfigFunctions","path":"scripts/GameConfigFunctions/GameConfigFunctions.yy",},},
+    {"id":{"name":"GameFeel","path":"scripts/GameFeel/GameFeel.yy",},},
     {"id":{"name":"Inputs","path":"scripts/Inputs/Inputs.yy",},},
     {"id":{"name":"MushGlobalsAndMacros","path":"scripts/MushGlobalsAndMacros/MushGlobalsAndMacros.yy",},},
     {"id":{"name":"State","path":"scripts/State/State.yy",},},
