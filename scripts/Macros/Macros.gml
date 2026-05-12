@@ -1,3 +1,0 @@
-#macro DEBUG false
-#macro Debug:DEBUG true
-#macro GRAV .3

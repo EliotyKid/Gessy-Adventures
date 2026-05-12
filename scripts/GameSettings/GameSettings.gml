@@ -6,7 +6,7 @@ with(global.game_settings){
 	view_height = 216
 	gui_width = view_width
 	gui_height =  view_height
-	window_caption = "Gessy adventuresl"
+	window_caption = "Gessy Adventures"
 	window_scale = 4
 	window_width = view_width*window_scale
 	window_height = view_height*window_scale

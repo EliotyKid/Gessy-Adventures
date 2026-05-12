@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"Cheats",
   "parent":{
-    "name":"Cheats",
-    "path":"folders/Scripts/Systems/Cheats.yy",
+    "name":"Customize",
+    "path":"folders/Mush Core/Customize.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

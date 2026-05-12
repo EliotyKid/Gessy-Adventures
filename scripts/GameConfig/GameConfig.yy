@@ -5,8 +5,8 @@
   "isDnD":false,
   "name":"GameConfig",
   "parent":{
-    "name":"Core",
-    "path":"folders/Scripts/Core.yy",
+    "name":"Customize",
+    "path":"folders/Mush Core/Customize.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

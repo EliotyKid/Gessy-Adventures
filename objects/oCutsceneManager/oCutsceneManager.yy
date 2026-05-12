@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Controllers",
-    "path":"folders/Objects/Core/Controllers.yy",
+    "path":"folders/Mush Core/Objects/Controllers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

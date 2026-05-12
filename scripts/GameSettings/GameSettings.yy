@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"SysInput",
+  "%Name":"GameSettings",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"SysInput",
+  "name":"GameSettings",
   "parent":{
-    "name":"Systems",
-    "path":"folders/Mush Core/Scripts/Systems.yy",
+    "name":"Customize",
+    "path":"folders/MushCore/Customize.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -12,20 +12,12 @@ function gamepad_connect()  {
 }
 gamepad_connect()
 
-enum KEYS {
-  RIGHT,
-  LEFT,
-  JUMP,
-  SHIFT,
-  DOWN,
-  ATACK,
-}
 
 global.___key_binds = []
 
 #macro ___KEYBINDS global.___key_binds
 
-function ___add_key(_id,_name,_keyboard=noone,_mouse=noone,_gamepad=noone)  {
+function AddKeyBind(_id,_name,_keyboard=noone,_mouse=noone,_gamepad=noone)  {
   ___KEYBINDS[_id] = {
     name: _name,
     keyboard: [],
@@ -193,18 +185,5 @@ function UpdateVirtualInputStates() {
 
 #endregion
 
-#region binds
-___add_key(KEYS.RIGHT,"right",[ord("D"), vk_right], ,gp_padr)
-___add_key(KEYS.LEFT,"left",[ord("A"), vk_left], , gp_padl)
-___add_key(KEYS.JUMP,"jump",vk_space,,gp_face1)
-___add_key(KEYS.SHIFT,"shift",vk_shift)
-___add_key(KEYS.DOWN,"down",ord("S"))
-___add_key(KEYS.ATACK,"atack",ord("E"))
-#endregion
+___init_binds()
 
-#region Virtual Butons
-CreateVirtuaButton(new Vec2(30,global.game_settings.gui_height*.8), new Vec2(40), KEYS.LEFT)
-CreateVirtuaButton(new Vec2(80,game_settings.gui_height*.8), new Vec2(40), KEYS.RIGHT)
-CreateVirtuaButton(new Vec2(game_settings.gui_width*.8,game_settings.gui_height*.8), new Vec2(40), KEYS.JUMP)
-CreateVirtuaButton(new Vec2(game_settings.gui_width*.9,game_settings.gui_height*.6), new Vec2(40), KEYS.ATACK)
-#endregion

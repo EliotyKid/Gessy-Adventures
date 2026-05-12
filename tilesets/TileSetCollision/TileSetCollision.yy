@@ -1,19 +1,19 @@
 {
   "$GMTileSet":"v1",
-  "%Name":"TileSet1",
+  "%Name":"TileSetCollision",
   "autoTileSets":[],
   "macroPageTiles":{
     "SerialiseHeight":0,
     "SerialiseWidth":0,
     "TileSerialiseData":[],
   },
-  "name":"TileSet1",
+  "name":"TileSetCollision",
   "out_columns":3,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
     "name":"TileSet",
-    "path":"folders/TileSet.yy",
+    "path":"folders/MushCore/TileSet.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",

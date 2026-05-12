@@ -6,7 +6,7 @@
   "name":"Utilities",
   "parent":{
     "name":"Utilities",
-    "path":"folders/Scripts/Utilities.yy",
+    "path":"folders/Mush Core/Scripts/Utilities.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

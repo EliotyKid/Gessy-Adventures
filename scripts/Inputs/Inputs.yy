@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Macros",
+  "%Name":"Inputs",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Macros",
+  "name":"Inputs",
   "parent":{
-    "name":"Core",
-    "path":"folders/Scripts/Core.yy",
+    "name":"Customize",
+    "path":"folders/Mush Core/Customize.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

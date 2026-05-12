@@ -15,7 +15,7 @@
   "name":"rInit",
   "parent":{
     "name":"Rooms",
-    "path":"folders/Rooms.yy",
+    "path":"folders/Mush Core/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

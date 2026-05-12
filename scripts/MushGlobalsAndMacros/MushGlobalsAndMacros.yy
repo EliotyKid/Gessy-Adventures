@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"SysStateMachine",
+  "%Name":"MushGlobalsAndMacros",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"SysStateMachine",
+  "name":"MushGlobalsAndMacros",
   "parent":{
-    "name":"Systems",
-    "path":"folders/Scripts/Systems.yy",
+    "name":"Core",
+    "path":"folders/Mush Core/Scripts/Core.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

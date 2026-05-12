@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"Globais",
+  "%Name":"GameConfigFunctions",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"Globais",
+  "name":"GameConfigFunctions",
   "parent":{
     "name":"Core",
-    "path":"folders/Scripts/Core.yy",
+    "path":"folders/Mush Core/Scripts/Core.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

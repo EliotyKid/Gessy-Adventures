@@ -10,8 +10,8 @@
   "name":"oDebug",
   "overriddenProperties":[],
   "parent":{
-    "name":"Core",
-    "path":"folders/Objects/Core.yy",
+    "name":"Objects",
+    "path":"folders/Mush Core/Objects.yy",
   },
   "parentObjectId":null,
   "persistent":true,

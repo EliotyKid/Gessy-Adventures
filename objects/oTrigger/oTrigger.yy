@@ -10,7 +10,7 @@
   "overriddenProperties":[],
   "parent":{
     "name":"Triggers",
-    "path":"folders/Objects/Core/Triggers.yy",
+    "path":"folders/Mush Core/Objects/Triggers.yy",
   },
   "parentObjectId":null,
   "persistent":false,

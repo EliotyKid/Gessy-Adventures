@@ -6,7 +6,7 @@
   "name":"SysCutscene",
   "parent":{
     "name":"Systems",
-    "path":"folders/Scripts/Systems.yy",
+    "path":"folders/Mush Core/Scripts/Systems.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",
