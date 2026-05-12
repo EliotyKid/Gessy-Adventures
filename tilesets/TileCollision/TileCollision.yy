@@ -8,12 +8,12 @@
     "TileSerialiseData":[],
   },
   "name":"TileCollision",
-  "out_columns":3,
+  "out_columns":4,
   "out_tilehborder":2,
   "out_tilevborder":2,
   "parent":{
-    "name":"TileColision",
-    "path":"folders/Mush Core/TileColision.yy",
+    "name":"Collisions",
+    "path":"folders/Mush Core/Collisions.yy",
   },
   "resourceType":"GMTileSet",
   "resourceVersion":"2.0",
@@ -34,5 +34,5 @@
   "tileWidth":16,
   "tilexoff":0,
   "tileyoff":0,
-  "tile_count":8,
+  "tile_count":16,
 }

@@ -14,7 +14,7 @@ move_dir = 0
 move_dir_before = 0
 
 var _tl = layer_tilemap_get_id("tile_collision")
-colision_list = [_tl]
+colision_list = [_tl, oRamp]
 is_ground = false
 
 qtd_jumps = 1
@@ -397,11 +397,36 @@ apply_velocity = function() {
         coyote_timer = max_coyote_timer
     }
     
-    move_and_collide(hsp,0,colision_list,12)
-    move_and_collide(0,vsp,colision_list,12)
+
+    var _max_slope = 4; // Altura máxima em pixels que o jogador consegue subir (inclinação)
+    
+    if (place_meeting(x + hsp, y, colision_list)) {
+        // Verifica se é uma rampa (tentando subir pixel por pixel)
+        for (var i = 1; i <= _max_slope; i++) {
+            if (!place_meeting(x + hsp, y - i, colision_list)) {
+                y -= i;
+                break;
+            }
+        }
+    }
+    move_and_collide(hsp, 0, colision_list, 12);
+    
+
+    if (is_ground && !place_meeting(x, y + 1, colision_list) && place_meeting(x, y + _max_slope + 1, colision_list)) {
+        // Procura o chão logo abaixo e ajusta a posição y
+        for (var i = 1; i <= _max_slope; i++) {
+            if (place_meeting(x, y + i + 1, colision_list)) {
+                y += i;
+                break;
+            }
+        }
+    }
+    
+    move_and_collide(0, vsp, colision_list, 12);
 }
 
 function check_ground() {
+    if place_meeting(x,y,colision_list) y--
     is_ground = place_meeting(x,y+1,colision_list)
 }
 

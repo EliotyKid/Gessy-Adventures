@@ -16,7 +16,7 @@
   ],
   "gridX":0,
   "gridY":0,
-  "height":32,
+  "height":64,
   "HTile":false,
   "layers":[
     {"$GMImageLayer":"","%Name":"5382294b-697d-412e-b631-fd8696907d18","blendMode":0,"displayName":"default","isLocked":false,"name":"5382294b-697d-412e-b631-fd8696907d18","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
@@ -25,8 +25,8 @@
   "nineSlice":null,
   "origin":0,
   "parent":{
-    "name":"TileColision",
-    "path":"folders/Mush Core/TileColision.yy",
+    "name":"Collisions",
+    "path":"folders/Mush Core/Collisions.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",
